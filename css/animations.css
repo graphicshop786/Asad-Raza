@@ -1,0 +1,324 @@
+/* ==========================================================================
+   ASAD RAZA PORTFOLIO — ANIMATIONS & MICRO-INTERACTIONS
+   Premium Upgrade — v2.0
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. @property Registration for CSS Houdini Animations
+   -------------------------------------------------------------------------- */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --shimmer-pos {
+  syntax: '<percentage>';
+  initial-value: -100%;
+  inherits: false;
+}
+
+/* --------------------------------------------------------------------------
+   1. Floating & Pulsing Keyframes
+   -------------------------------------------------------------------------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(240, 196, 90, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(240, 196, 90, 0.5), 0 0 60px rgba(240, 196, 90, 0.15); }
+}
+
+@keyframes textShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes borderRotate {
+  0% { --angle: 0deg; }
+  100% { --angle: 360deg; }
+}
+
+@keyframes expandLine {
+  from { width: 0; opacity: 0; }
+  to { width: 60px; opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* --------------------------------------------------------------------------
+   2. Scroll Progress Bar
+   -------------------------------------------------------------------------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue), var(--accent-violet));
+  z-index: 99999;
+  width: 0%;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 10px var(--accent-gold-glow);
+}
+
+/* --------------------------------------------------------------------------
+   3. Custom Interactive Neon Cursor
+   -------------------------------------------------------------------------- */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 0 10px var(--accent-gold-glow);
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--accent-gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 0 12px var(--accent-gold-glow);
+}
+
+.cursor-hover .custom-cursor {
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent-blue);
+  box-shadow: 0 0 15px var(--accent-blue-glow);
+}
+
+.cursor-hover .custom-cursor-follower {
+  width: 54px;
+  height: 54px;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 20px var(--accent-blue-glow);
+}
+
+/* Cursor Trail Dots */
+.cursor-trail {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999997;
+  background: var(--accent-gold);
+}
+
+/* Hide custom cursor on mobile/touch devices */
+@media (pointer: coarse) {
+  .custom-cursor,
+  .custom-cursor-follower,
+  .cursor-trail {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Hover Micro-interactions & Ripple
+   -------------------------------------------------------------------------- */
+.magnetic-btn {
+  display: inline-block;
+  transition: transform 0.2s ease-out;
+}
+
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240, 196, 90, 0.4) 0%, transparent 70%);
+  transform: scale(0);
+  animation: ripple 0.7s ease-out;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Tilt effect card helper */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.5s ease;
+}
+
+/* --------------------------------------------------------------------------
+   5. Animated Border Glow on Hover (Project & Service Cards)
+   -------------------------------------------------------------------------- */
+.project-card,
+.service-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease, border-color 0.4s ease;
+  will-change: transform;
+}
+
+.project-card::after,
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--angle), transparent 60%, var(--accent-gold) 78%, var(--accent-blue) 88%, var(--accent-violet) 94%, transparent 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.project-card:hover,
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(240, 196, 90, 0.08);
+}
+
+.project-card:hover::after,
+.service-card:hover::after {
+  opacity: 1;
+  animation: borderRotate 3s linear infinite;
+}
+
+/* --------------------------------------------------------------------------
+   6. Nav Link Active Indicator
+   -------------------------------------------------------------------------- */
+.nav-link {
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 1px;
+  box-shadow: 0 0 8px var(--accent-gold-glow);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-gold);
+}
+
+/* --------------------------------------------------------------------------
+   7. Service Card Number Badge
+   -------------------------------------------------------------------------- */
+.service-card {
+  counter-increment: service-counter;
+}
+
+.service-card::before {
+  content: '0' counter(service-counter);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  opacity: 0.4;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+.services-grid {
+  counter-reset: service-counter;
+}
+
+/* --------------------------------------------------------------------------
+   8. Skeleton Loading for Images
+   -------------------------------------------------------------------------- */
+.project-img {
+  background: linear-gradient(90deg, var(--bg-dark-secondary) 25%, rgba(255,255,255,0.05) 50%, var(--bg-dark-secondary) 75%);
+  background-size: 200% 100%;
+}
+
+/* --------------------------------------------------------------------------
+   9. Touch Feedback for Mobile
+   -------------------------------------------------------------------------- */
+@media (pointer: coarse) {
+  .glass-card:active,
+  .project-card:active,
+  .service-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+  
+  .btn:active {
+    transform: scale(0.96);
+  }
+  
+  .social-link:active {
+    transform: scale(0.9);
+    background: rgba(240, 196, 90, 0.15);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. Accessibility & Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .avatar-ring {
+    animation: none !important;
+  }
+
+  .custom-cursor, .custom-cursor-follower, .cursor-trail {
+    display: none !important;
+  }
+  
+  .scroll-progress {
+    display: none !important;
+  }
+}

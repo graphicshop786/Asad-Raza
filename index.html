@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asad Raza — Web Developer | Health Facilitator | Economics Graduate</title>
+
+  <!-- Meta Descriptions & SEO -->
+  <meta name="description"
+    content="Personal Portfolio of Asad Raza — Web Developer at Blu Links Agency, 4-Year Health Facilitator for Punjab Health Card, BS (Hons) Economics Graduate from GCUF, and Excel Specialist based in Chiniot, Pakistan.">
+  <meta name="keywords"
+    content="Asad Raza, Web Developer, Blu Links Agency, Health Facilitator, Punjab Health Card, Sehat Sahulat, Stock Recon System, Homeopathy Shafqat Raza, Economics Graduate, Excel Expert, Chiniot, Pakistan, Portfolio">
+  <meta name="author" content="Asad Raza">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asadraza.dev/">
+  <meta property="og:title" content="Asad Raza — Web Developer & Health Facilitator">
+  <meta property="og:description"
+    content="Explore the portfolio of Asad Raza, featuring high-performance web development at Blu Links Agency, Punjab Health Card facilitation, Excel automation, and analytical solutions.">
+  <meta property="og:image" content="assets/images/profile.jpeg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Asad Raza — Web Developer & Health Facilitator">
+  <meta name="twitter:description"
+    content="Explore the portfolio of Asad Raza featuring web development, healthcare facilitation, and MS Excel analytics.">
+  <meta name="twitter:image" content="assets/images/profile.jpeg">
+
+  <!-- Favicon / Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Three.js & GSAP via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Application Modules -->
+  <script src="js/main.js" defer></script>
+  <script src="js/three-scene.js" defer></script>
+  <script src="js/typing.js" defer></script>
+  <script src="js/cursor.js" defer></script>
+  <script src="js/counters.js" defer></script>
+  <script src="js/form.js" defer></script>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Asad Raza",
+    "jobTitle": "Web Developer & Health Facilitator Specialist",
+    "email": "mailto:asadraza175634@gmail.com",
+    "telephone": "+923407416930",
+    "url": "https://asadraza.dev/",
+    "sameAs": [
+      "https://github.com/tms10816-art",
+      "https://www.linkedin.com/in/asad-raza-57a33018a"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chiniot",
+      "addressRegion": "Punjab",
+      "addressCountry": "Pakistan"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "GC University Faisalabad"
+    },
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "Blu Links Agency"
+      },
+      {
+        "@type": "Organization",
+        "name": "Punjab Health Card Program"
+      }
+    ],
+    "knowsAbout": ["Web Development", "HTML5", "CSS3", "JavaScript", "WordPress", "Microsoft Excel", "Economics", "Healthcare Facilitation", "Data Entry"]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-logo">ASAD <span>RAZA</span></div>
+    <div class="preloader-bar">
+      <div class="preloader-progress"></div>
+    </div>
+  </div>
+
+  <!-- Background 3D Canvas -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" aria-label="Asad Raza Home">
+        ASAD RAZA <span class="logo-badge">A1</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary magnetic-btn ripple-effect">
+        <span>Hire Me</span>
+        <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+      </a>
+
+      <button class="hamburger" aria-label="Toggle Mobile Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav" aria-label="Mobile Navigation">
+    <a href="#about" class="nav-link"><i data-lucide="user" style="width: 18px; height: 18px;"></i> About</a>
+    <a href="#skills" class="nav-link"><i data-lucide="cpu" style="width: 18px; height: 18px;"></i> Skills</a>
+    <a href="#experience" class="nav-link"><i data-lucide="briefcase" style="width: 18px; height: 18px;"></i> Experience</a>
+    <a href="#education" class="nav-link"><i data-lucide="graduation-cap" style="width: 18px; height: 18px;"></i>
+      Education</a>
+    <a href="#projects" class="nav-link"><i data-lucide="folder-git-2" style="width: 18px; height: 18px;"></i>
+      Projects</a>
+    <a href="#services" class="nav-link"><i data-lucide="layers" style="width: 18px; height: 18px;"></i> Services</a>
+    <a href="#contact" class="nav-link"><i data-lucide="mail" style="width: 18px; height: 18px;"></i> Contact</a>
+
+    <a href="#contact" class="btn btn-primary magnetic-btn ripple-effect"
+      style="margin-top: 1rem; width: 80%; justify-content: center;">
+      <span>Hire Me</span>
+      <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+    </a>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="cell-tag">
+            <span class="dot"></span>
+            A1 · HERO
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="name">Asad Raza</span>
+          </h1>
+
+          <div class="typing-container">
+            <span id="typing-text" class="typing-text"></span>
+          </div>
+
+          <p class="hero-description">
+            Web Developer at <strong>Blu Links Agency</strong> & former 4-year <strong>Punjab Health Card</strong> Health Facilitator with a BS (Hons) in Economics from <strong>GC University Faisalabad</strong>. Specializing in modern web applications, healthcare digital portals, and MS Excel analytics based in Chiniot, Pakistan.
+          </p>
+
+          <div class="hero-cta">
+            <a href="assets/cv/Asad-Raza-CV.pdf" download="Asad-Raza-CV.pdf"
+              class="btn btn-primary magnetic-btn ripple-effect">
+              <i data-lucide="download" style="width: 18px; height: 18px;"></i>
+              <span>Download CV</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary magnetic-btn ripple-effect">
+              <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/asad-raza-57a33018a" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="LinkedIn Profile">
+              <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
+            </a>
+            <a href="https://github.com/tms10816-art" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="GitHub Profile">
+              <i data-lucide="github" style="width: 20px; height: 20px;"></i>
+            </a>
+            <a href="mailto:asadraza175634@gmail.com" class="social-link" aria-label="Send Email">
+              <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+            </a>
+            <a href="https://wa.me/923407416930" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="WhatsApp Contact">
+              <i data-lucide="phone" style="width: 20px; height: 20px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-avatar-wrapper">
+          <div class="avatar-ring">
+            <div class="avatar-img-container">
+              <img src="assets/images/profile.jpeg" alt="Asad Raza — Web Developer and Health Facilitator"
+                class="avatar-img" width="320" height="320" loading="eager">
+            </div>
+          </div>
+
+          <div class="hero-stat-badge">
+            <div class="icon-box">
+              <i data-lucide="award" style="width: 20px; height: 20px;"></i>
+            </div>
+            <div>
+              <div class="stat-val">4+ Years Exp.</div>
+              <div class="stat-lbl">Health Facilitator & Web Dev</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>SCROLL DOWN</span>
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-spacing">
+      <div class="container">
+        <div class="section-header">
+          <div class="cell-tag">
+            <span class="dot"></span>
+            A2 · ABOUT
+          </div>
+          <h2 class="section-title">Analytical Mind. Digital Precision.</h2>
+          <p class="section-subtitle">Combining quantitative economics background with clean web development practices.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-card tilt-card">
+            <div class="card-icon">
+              <i data-lucide="code" style="width: 26px; height: 26px;"></i>
+            </div>
+            <h3 class="card-title">Web Development</h3>
+            <p class="card-text">
+              1 year hands-on experience at Blu Links Agency crafting responsive frontend interfaces, client portals, inventory reconciliation systems, and WordPress solutions.
+            </p>
+          </div>
+
+          <div class="glass-card tilt-card">
+            <div class="card-icon">
+              <i data-lucide="heart-pulse" style="width: 26px; height: 26px;"></i>
+            </div>
+            <h3 class="card-title">Health Facilitation</h3>
+            <p class="card-text">
+              4 years experience as Health Facilitator under the Punjab Health Card initiative (Sehat Sahulat Program), coordinating patient records, hospital helpdesks, and claims.
+            </p>
+          </div>
+
+          <div class="glass-card tilt-card">
+            <div class="card-icon">
+              <i data-lucide="trending-up" style="width: 26px; height: 26px;"></i>
+            </div>
+            <h3 class="card-title">Economics & Analytics</h3>
+            <p class="card-text">
+              Graduated with a BS (Hons) in Economics from GC University Faisalabad (GCUF). Possesses strong quantitative reasoning, statistical data modeling, and market logic.
+            </p>
+          </div>
+
+          <div class="glass-card tilt-card">
+            <div class="card-icon">
+              <i data-lucide="table" style="width: 26px; height: 26px;"></i>
+            </div>
+            <h3 class="card-title">MS Excel & Office Expert</h3>
+            <p class="card-text">
+              Proficient in Microsoft Excel automated formulas, data management, web research, MS Word, and rapid keyboard typing (45 WPM) with zero-error precision.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section-spacing">
+      <div class="container">
+        <div class="section-header">
+          <div class="cell-tag">
+            <span class="dot"></span>
+            A3 · SKILLS
+          </div>
+          <h2 class="section-title">Core Competencies</h2>
+          <p class="section-subtitle">A balanced breakdown of technical web development stack, office tools, and
+            interpersonal skills.</p>
+        </div>
+
+        <div class="skills-container">
+          <!-- Technical Web Skills -->
+          <div>
+            <h3 class="skill-category-title">
+              <i data-lucide="terminal" style="width: 22px; height: 22px;"></i>
+              Technical Web Stack
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-card" data-percent="95">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="file-code" style="width: 16px; height: 16px;"></i>
+                    HTML5</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="90">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="palette" style="width: 16px; height: 16px;"></i> CSS3 &
+                    Flexbox/Grid</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="85">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="cpu" style="width: 16px; height: 16px;"></i> JavaScript
+                    (ES6+)</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="90">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="layout" style="width: 16px; height: 16px;"></i>
+                    Bootstrap</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="95">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="smartphone" style="width: 16px; height: 16px;"></i>
+                    Responsive Design</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="85">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="globe" style="width: 16px; height: 16px;"></i>
+                    WordPress</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Office & Excel Skills -->
+          <div>
+            <h3 class="skill-category-title">
+              <i data-lucide="sheet" style="width: 22px; height: 22px;"></i>
+              MS Office & Data Analytics
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-card" data-percent="95">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="table-properties" style="width: 16px; height: 16px;"></i>
+                    Microsoft Excel</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="90">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="file-text" style="width: 16px; height: 16px;"></i> Microsoft
+                    Word</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="88">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="presentation" style="width: 16px; height: 16px;"></i>
+                    PowerPoint</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="92">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="keyboard" style="width: 16px; height: 16px;"></i> Data Entry
+                    & Typing (45 WPM)</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="95">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="search" style="width: 16px; height: 16px;"></i> Web
+                    Research</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="90">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="mail-check" style="width: 16px; height: 16px;"></i> Email
+                    Management</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Healthcare & Administrative Operations -->
+          <div>
+            <h3 class="skill-category-title">
+              <i data-lucide="activity" style="width: 22px; height: 22px;"></i>
+              Healthcare & Administrative Operations
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-card" data-percent="95">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="heart-handshake" style="width: 16px; height: 16px;"></i> Health Card Facilitation</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="95">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="clipboard-list" style="width: 16px; height: 16px;"></i> Patient Registration & Records</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="90">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="building-2" style="width: 16px; height: 16px;"></i> Hospital Desk Coordination</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div>
+            <h3 class="skill-category-title">
+              <i data-lucide="users" style="width: 22px; height: 22px;"></i>
+              Soft Skills & Professional Ethics
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-card" data-percent="95">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="lightbulb" style="width: 16px; height: 16px;"></i> Problem
+                    Solving</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="90">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="message-square" style="width: 16px; height: 16px;"></i>
+                    Communication</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="92">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="user-check" style="width: 16px; height: 16px;"></i>
+                    Teamwork</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="skill-card" data-percent="90">
+                <div class="skill-header">
+                  <span class="skill-name"><i data-lucide="clock" style="width: 16px; height: 16px;"></i> Time
+                    Management</span>
+                  <span class="skill-percent">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section-spacing">
+      <div class="container">
+        <div class="section-header">
+          <div class="cell-tag">
+            <span class="dot"></span>
+            A4 · EXPERIENCE
+          </div>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">Professional track record in healthcare administration and frontend web engineering.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience Item 1: Blu Links Agency -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">1 YEAR EXPERIENCE · WEB DEVELOPER</div>
+              <h3 class="timeline-degree">Web Developer & Digital Solutions Specialist</h3>
+              <p class="timeline-institution">Blu Links Agency</p>
+              <ul style="margin-top: 0.75rem; color: var(--text-muted); font-size: 0.95rem; list-style-type: disc; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li>Engineered responsive web interfaces, web applications, and landing pages using HTML5, CSS3, JavaScript, and CMS platforms.</li>
+                <li>Developed real-world live web systems including Stock Reconciliation System and Homeopathy Shafqat Raza Portal deployed on Vercel.</li>
+                <li>Optimized page performance, Core Web Vitals, mobile UX responsiveness, and cross-browser stability for agency clients.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Item 2: Punjab Health Card -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">4 YEARS EXPERIENCE · HEALTH FACILITATOR</div>
+              <h3 class="timeline-degree">Health Facilitator — Punjab Health Card</h3>
+              <p class="timeline-institution">Punjab Health Initiative Management Company (PHIMC) / Sehat Sahulat Program, Punjab, Pakistan</p>
+              <ul style="margin-top: 0.75rem; color: var(--text-muted); font-size: 0.95rem; list-style-type: disc; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li>Served 4 years facilitating beneficiary registration, hospital admission desk support, and patient care guidance under the Punjab Health Card initiative.</li>
+                <li>Verified patient insurance eligibility, updated digital medical records, and managed confidential healthcare documentation with high accuracy.</li>
+                <li>Coordinated seamlessly between hospital management, doctors, and insurance authorities to streamline patient care delivery.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section-spacing">
+      <div class="container">
+        <div class="section-header">
+          <div class="cell-tag">
+            <span class="dot"></span>
+            A5 · EDUCATION
+          </div>
+          <h2 class="section-title">Academic Qualifications</h2>
+          <p class="section-subtitle">Groundwork in economic theory, analytical modeling, and quantitative analysis.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2014 – 2018 · GRADUATED</div>
+              <h3 class="timeline-degree">BS (Hons) Economics</h3>
+              <p class="timeline-institution">GC University Faisalabad (GCUF), Pakistan</p>
+              <p style="margin-top: 0.75rem; color: var(--text-muted); font-size: 0.95rem;">
+                Completed 4-year honors degree with coursework in microeconomics, macroeconomics, econometrics,
+                statistical analysis, and data modeling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section-spacing">
+      <div class="container">
+        <div class="section-header">
+          <div class="cell-tag">
+            <span class="dot"></span>
+            A6 · PROJECTS
+          </div>
+          <h2 class="section-title">Featured Work Showcase</h2>
+          <p class="section-subtitle">Real-world applications spanning web engineering, stock audit systems, and clinical healthcare platforms.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Stock Recon System -->
+          <div class="project-card tilt-card">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-analytics.png" alt="Stock Recon System - Inventory Audit Platform"
+                class="project-img" loading="lazy" width="600" height="337">
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Stock Audit</span>
+                <span class="tag">Inventory Recon</span>
+                <span class="tag">Vercel Live</span>
+              </div>
+              <h3 class="project-title">Stock Recon System</h3>
+              <p class="project-description">
+                Comprehensive stock reconciliation and inventory audit web application featuring real-time stock tracking, automated variance calculation, and audit reporting.
+              </p>
+              <div class="project-links">
+                <a href="https://stock-recon-system.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <span>Live Demo</span>
+                  <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                </a>
+                <a href="https://github.com/tms10816-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+                  style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <i data-lucide="github" style="width: 14px; height: 14px;"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Homeopathy Shafqat Raza Portal -->
+          <div class="project-card tilt-card">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-wordpress.png" alt="Homeopathy Shafqat Raza Clinical Portal" class="project-img"
+                loading="lazy" width="600" height="337">
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Healthcare Web</span>
+                <span class="tag">Clinical Consultations</span>
+                <span class="tag">Responsive UI</span>
+                <span class="tag">Vercel Live</span>
+              </div>
+              <h3 class="project-title">Homeopathy Shafqat Raza Portal</h3>
+              <p class="project-description">
+                Modern clinical healthcare portal providing online patient consultation scheduling, homeopathy treatment guidance, digital inquiry management, and clinic presentation.
+              </p>
+              <div class="project-links">
+                <a href="https://homeopathyshafqatraza.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <span>Live Demo</span>
+                  <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                </a>
+                <a href="https://github.com/tms10816-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+                  style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <i data-lucide="github" style="width: 14px; height: 14px;"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Excel Financial & Analytics Dashboard -->
+          <div class="project-card tilt-card">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-excel.png" alt="Excel Financial & Automation Dashboard"
+                class="project-img" loading="lazy" width="600" height="337">
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">MS Excel</span>
+                <span class="tag">VBA / Formulas</span>
+                <span class="tag">Data Analytics</span>
+              </div>
+              <h3 class="project-title">Excel Financial & Analytics Dashboard</h3>
+              <p class="project-description">
+                Interactive financial modeling spreadsheet with dynamic PivotTables, chart visualizations, VBA macros,
+                and executive KPI reporting.
+              </p>
+              <div class="project-links">
+                <a href="#contact" class="btn btn-secondary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <span>Live Demo</span>
+                  <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                </a>
+                <a href="https://github.com/tms10816-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+                  style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <i data-lucide="github" style="width: 14px; height: 14px;"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Modern E-Commerce Storefront -->
+          <div class="project-card tilt-card">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-ecommerce.png" alt="E-Commerce Landing Platform" class="project-img"
+                loading="lazy" width="600" height="337">
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3 Grid</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <h3 class="project-title">Modern E-Commerce Storefront</h3>
+              <p class="project-description">
+                High-converting responsive e-commerce web interface with modern dark aesthetic, instant product
+                filtering, dynamic cart drawer, and smooth micro-animations.
+              </p>
+              <div class="project-links">
+                <a href="#contact" class="btn btn-secondary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <span>Live Demo</span>
+                  <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                </a>
+                <a href="https://github.com/tms10816-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+                  style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <i data-lucide="github" style="width: 14px; height: 14px;"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Creative Developer Portfolio -->
+          <div class="project-card tilt-card">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-template.png" alt="Creative Developer Portfolio Template"
+                class="project-img" loading="lazy" width="600" height="337">
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Three.js</span>
+                <span class="tag">GSAP Animations</span>
+                <span class="tag">Glassmorphism</span>
+              </div>
+              <h3 class="project-title">Creative Developer Portfolio</h3>
+              <p class="project-description">
+                Futuristic Awwwards-inspired personal portfolio design featuring 3D canvas particle background, GSAP
+                scroll reveals, and magnetic cursor physics.
+              </p>
+              <div class="project-links">
+                <a href="#contact" class="btn btn-secondary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <span>Live Demo</span>
+                  <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                </a>
+                <a href="https://github.com/tms10816-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+                  style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <i data-lucide="github" style="width: 14px; height: 14px;"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Website Performance & Health Portal -->
+          <div class="project-card tilt-card">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-maintenance.png" alt="Website Maintenance & Health Hub"
+                class="project-img" loading="lazy" width="600" height="337">
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Web Security</span>
+                <span class="tag">Performance 99%</span>
+                <span class="tag">Maintenance</span>
+              </div>
+              <h3 class="project-title">Website Performance & Maintenance Hub</h3>
+              <p class="project-description">
+                Website speed & security auditing hub monitoring Core Web Vitals (LCP, CLS, INP), SSL status, and
+                automated weekly database backup routines.
+              </p>
+              <div class="project-links">
+                <a href="#contact" class="btn btn-secondary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <span>Live Demo</span>
+                  <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                </a>
+                <a href="https://github.com/tms10816-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+                  style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                  <i data-lucide="github" style="width: 14px; height: 14px;"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section-spacing">
+      <div class="container">
+        <div class="section-header">
+          <div class="cell-tag">
+            <span class="dot"></span>
+            A7 · SERVICES
+          </div>
+          <h2 class="section-title">Professional Digital Services</h2>
+          <p class="section-subtitle">Tailored technical & analytical services for businesses, startups, agencies, and
+            individuals.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title">Web Development</h3>
+              <p class="service-desc">Custom responsive web applications built with clean semantic HTML5, modern CSS3,
+                and high-performance Vanilla ES6+ JavaScript.</p>
+              <div class="service-features">
+                <div class="service-feature-item"><span class="check">✓</span> Clean HTML5 & ES6+ JavaScript</div>
+                <div class="service-feature-item"><span class="check">✓</span> 95+ PageSpeed Performance Score</div>
+                <div class="service-feature-item"><span class="check">✓</span> Full Cross-Browser Compatibility</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-secondary ripple-effect"
+              style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">
+              <span>Inquire Service</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">Responsive UI Design</h3>
+              <p class="service-desc">Fluid mobile-first website layouts that display flawlessly across 4K desktop
+                monitors, laptops, iPads, tablets, and smartphones.</p>
+              <div class="service-features">
+                <div class="service-feature-item"><span class="check">✓</span> Mobile-First Responsive Breakpoints</div>
+                <div class="service-feature-item"><span class="check">✓</span> Zero Cumulative Layout Shift (CLS)</div>
+                <div class="service-feature-item"><span class="check">✓</span> Custom Touch & Gesture Friendly</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-secondary ripple-effect"
+              style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">
+              <span>Inquire Service</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="service-title">WordPress Development</h3>
+              <p class="service-desc">Custom WordPress setup, Elementor/Gutenberg theme customization, security
+                hardening, plugin integration, and site migration.</p>
+              <div class="service-features">
+                <div class="service-feature-item"><span class="check">✓</span> Custom Theme & Plugin Setup</div>
+                <div class="service-feature-item"><span class="check">✓</span> Firewall & Security Hardening</div>
+                <div class="service-feature-item"><span class="check">✓</span> User-Friendly CMS Dashboard</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-secondary ripple-effect"
+              style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">
+              <span>Inquire Service</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="service-title">Landing Pages</h3>
+              <p class="service-desc">High-converting single-page landing sites crafted with compelling visual
+                hierarchy, glassmorphism aesthetics, and strong conversion CTAs.</p>
+              <div class="service-features">
+                <div class="service-feature-item"><span class="check">✓</span> High Conversion Lead Forms</div>
+                <div class="service-feature-item"><span class="check">✓</span> Engaging Micro-Animations</div>
+                <div class="service-feature-item"><span class="check">✓</span> Integrated Analytics & Pixel Setup</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-secondary ripple-effect"
+              style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">
+              <span>Inquire Service</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Website Maintenance</h3>
+              <p class="service-desc">Ongoing website maintenance, Core Web Vitals speed tuning, security vulnerability
+                patches, broken link checks, and content updates.</p>
+              <div class="service-features">
+                <div class="service-feature-item"><span class="check">✓</span> Automated Weekly Database Backups</div>
+                <div class="service-feature-item"><span class="check">✓</span> Core Web Vitals Performance Tuning</div>
+                <div class="service-feature-item"><span class="check">✓</span> 24/7 Security & Uptime Monitoring</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-secondary ripple-effect"
+              style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">
+              <span>Inquire Service</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="3" y1="15" x2="21" y2="15"></line>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                  <line x1="15" y1="3" x2="15" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">MS Excel Solutions</h3>
+              <p class="service-desc">Custom spreadsheet templates, automated VBA macros, complex financial modeling,
+                dynamic PivotTables, and executive dashboards.</p>
+              <div class="service-features">
+                <div class="service-feature-item"><span class="check">✓</span> Automated VBA Macro Scripts</div>
+                <div class="service-feature-item"><span class="check">✓</span> Econometric & Financial Data Models</div>
+                <div class="service-feature-item"><span class="check">✓</span> Interactive KPI Chart Dashboards</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-secondary ripple-effect"
+              style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">
+              <span>Inquire Service</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Service 7 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title">Data Entry Services</h3>
+              <p class="service-desc">High-precision data entry, web research, document formatting in MS Word, data
+                cleaning, and virtual assistant administrative support.</p>
+              <div class="service-features">
+                <div class="service-feature-item"><span class="check">✓</span> 45 WPM Typing Speed & Precision</div>
+                <div class="service-feature-item"><span class="check">✓</span> Detailed Web Research & Data Extraction
+                </div>
+                <div class="service-feature-item"><span class="check">✓</span> 100% Confidential File Management</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-secondary ripple-effect"
+              style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">
+              <span>Inquire Service</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Service 8 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">E-Commerce Solutions</h3>
+              <p class="service-desc">Complete online store setup with product catalogs, shopping cart drawer UI,
+                payment gateway integrations, and order management.</p>
+              <div class="service-features">
+                <div class="service-feature-item"><span class="check">✓</span> Dynamic Product Catalog & Filters</div>
+                <div class="service-feature-item"><span class="check">✓</span> Cart & Checkout Flow Optimization</div>
+                <div class="service-feature-item"><span class="check">✓</span> Payment Gateway Ready Structure</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-secondary ripple-effect"
+              style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">
+              <span>Inquire Service</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-spacing">
+      <div class="container">
+        <div class="section-header">
+          <div class="cell-tag">
+            <span class="dot"></span>
+            A8 · CONTACT
+          </div>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-subtitle">Have a project in mind or interested in hiring? Drop a message below!</p>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <div class="contact-info-list">
+              <div class="contact-item">
+                <div class="contact-icon"><i data-lucide="mail" style="width: 22px; height: 22px;"></i></div>
+                <div class="contact-details">
+                  <label>Email Address</label>
+                  <a href="mailto:asadraza175634@gmail.com">asadraza175634@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i data-lucide="phone" style="width: 22px; height: 22px;"></i></div>
+                <div class="contact-details">
+                  <label>Phone / WhatsApp</label>
+                  <a href="https://wa.me/923407416930">+92 340 7416930</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i data-lucide="map-pin" style="width: 22px; height: 22px;"></i></div>
+                <div class="contact-details">
+                  <label>Location</label>
+                  <span>Chiniot, Punjab, Pakistan</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="map-container">
+              <iframe title="Location Map of Chiniot, Pakistan"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54238.1969415494!2d72.955437!3d31.720884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39223fc964fa135d%3A0x6b13cf14a1e9df64!2sChiniot%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-container">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email Address</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="e.g. Web Development Inquiry"
+                  required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message</label>
+                <textarea id="form-message" class="form-textarea"
+                  placeholder="Tell me about your project requirements..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary magnetic-btn ripple-effect" style="width: 100%;">
+                <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+                <span>Send Message</span>
+              </button>
+
+              <div id="form-status" class="form-status" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-text">
+        © 2026 <strong>Asad Raza</strong>. Built with HTML5, CSS3, & Vanilla JS.
+      </div>
+      <div class="footer-cell">
+        SPREADSHEET REF: CELL [A1:A8]
+      </div>
+      <a href="#hero" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;"
+        aria-label="Back to Top">
+        <span>Back to Top</span>
+        <i data-lucide="arrow-up" style="width: 14px; height: 14px;"></i>
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
