@@ -1,2 +1,0 @@
-# Asad-Raza
-Personal Portfoilo

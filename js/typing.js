@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const words = [
     "Web Developer",
-    "Blu Links Agency Developer",
+    "Bluelinks Agency Developer",
     "Punjab Health Card Facilitator",
     "Economics Graduate",
     "MS Office & Excel Expert"
