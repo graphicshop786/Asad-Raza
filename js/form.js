@@ -54,18 +54,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailSubject = `[Portfolio Contact] ${data.subject}`;
     const emailBody = `Hi Asad Raza,\n\nName: ${data.name}\nEmail: ${data.email}\nSubject: ${data.subject}\n\nMessage:\n${data.message}\n\n---\nSent via Portfolio Website Contact Form`;
 
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(gmailRecipient)}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
     const mailtoUrl = `mailto:${gmailRecipient}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(gmailRecipient)}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
-    showStatus('Opening Gmail compose window with your pre-filled message...', 'success');
+    showStatus('Opening Gmail app / compose window with your pre-filled message...', 'success');
 
-    try {
-      const win = window.open(gmailUrl, '_blank');
-      if (!win || win.closed || typeof win.closed === 'undefined') {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // Mobile device: direct mailto launches native Gmail app
+      window.location.href = mailtoUrl;
+    } else {
+      // Desktop: attempt web Gmail first, fallback to mailto
+      try {
+        const win = window.open(gmailWebUrl, '_blank');
+        if (!win || win.closed || typeof win.closed === 'undefined') {
+          window.location.href = mailtoUrl;
+        }
+      } catch (err) {
         window.location.href = mailtoUrl;
       }
-    } catch (err) {
-      window.location.href = mailtoUrl;
     }
   }
 
