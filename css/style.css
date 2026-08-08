@@ -597,9 +597,20 @@ button, input, textarea {
   transition: all var(--transition-fast);
 }
 
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--accent-gold);
+  border-color: var(--border-gold);
+  background: rgba(240, 196, 90, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(240, 196, 90, 0.25);
+  outline: none;
+}
+
 .social-link:active {
   color: var(--accent-gold);
   border-color: var(--border-gold);
+  transform: translateY(0) scale(0.95);
 }
 
 /* Avatar Frame Mobile Base */
